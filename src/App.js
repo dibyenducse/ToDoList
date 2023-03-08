@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import AddTasks from './AddTasks';
 
 export default function ToDoList(){
   [tasks, setTasks] = useState(initialTasks);
@@ -29,6 +30,13 @@ export default function ToDoList(){
       setTasks()
     )
   }
+
+  return(
+    <>
+     <h1>ToDoList</h1>
+     <AddTasks onAddTask={handleAddTasks}
+    </>
+  )
 
 }
 
