@@ -1,41 +1,48 @@
 import {useState} from 'react';
 import AddTasks from './AddTasks';
+import TasksList from './tasksList';
+import React from 'react';
 
 export default function ToDoList(){
   [tasks, setTasks] = useState(initialTasks);
   
-  function handleAddTasks(text){
-    return(setTasks([
+  function handleAddTask(text){
+    setTasks([
       {
         ...tasks,
+        {
       id:taskId++,
       text:{text},
       done: true
-      }]
+      }
+    ]);
+  }
+
+
+  function handleChangeTask(task){
+      setTasks(
+        tasks.map((t) =>{
+          if(t.id == task.id){
+            return task;
+          } else{
+            return t;
+          }
+        } )
       )
-   )
   }
 
-
-  function handleChangeTasks(){
-
-    return(
-      setTasks()
-    )
-
-  }
-
-  function handleDeleteTasks(){
-    return(
-      setTasks()
-    )
+  function handleDeleteTask(taskId){
+      setTasks(tasks.filter((t) =>{
+         t.id !== taskId
+      }))
   }
 
   return(
-    <>
+    <div>
      <h1>ToDoList</h1>
-     <AddTasks onAddTask={handleAddTasks}
-    </>
+     <AddTasks onAddTask={handleAddTask} />
+     <TasksList onChangeTask={handleChangeTask} OnDeleteTask = {handleDeleteTask} />
+    </div>
   )
 
 }
