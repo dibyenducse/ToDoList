@@ -4,17 +4,15 @@ import TasksList from './tasksList';
 import React from 'react';
 
 export default function ToDoList(){
-  [tasks, setTasks] = useState(initialTasks);
+ const [tasks, setTasks] = useState(initialTasks);
   
   function handleAddTask(text){
     setTasks([
-      {
         ...tasks,
         {
       id:taskId++,
       text:{text},
-      done: true
-      }
+      },
     ]);
   }
 
@@ -32,9 +30,7 @@ export default function ToDoList(){
   }
 
   function handleDeleteTask(taskId){
-      setTasks(tasks.filter((t) =>{
-         t.id !== taskId
-      }))
+      setTasks(tasks.filter((t) => t.id !== taskId));
   }
 
   return(
@@ -51,7 +47,7 @@ export default function ToDoList(){
 
 let taskId = 3;
 const initialTasks = [
-  {id:0, text:"hello world", done: false},
-  {id:1, text:"hello moon", done: false},
-  {id:2, text:"hello sun", done: false},
+  {id:0, text:"hello world"},
+  {id:1, text:"hello moon" },
+  {id:2, text:"hello sun"},
 ]

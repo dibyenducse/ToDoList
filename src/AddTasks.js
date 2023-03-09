@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 
 export default function AddTasks(onAddTask){
-    [text, setText] = useState("");
+   const [text, setText] = useState("");
   return(
     <>
      <input 
