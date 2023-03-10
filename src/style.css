@@ -51,6 +51,15 @@ body {
   border: none;
   cursor: pointer;
   }
+  .edit-input{
+    background-color: rgb(97, 97, 106);
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    }
   .btn-edit{
     background-color: rgb(155, 79, 170);
     color: white;
