@@ -2,6 +2,7 @@ import {useState} from 'react';
 import AddTask from './AddTasks';
 import TasksList from './tasksList';
 import React from 'react';
+import "./style.css";
 
 export default function ToDoList(){
  const [tasks, setTasks] = useState(initialTasks);

@@ -1,0 +1,90 @@
+* {
+    background-color: rgb(177, 177, 180);
+}
+h1{
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+ToDoList{
+    background-color:aqua;
+}
+
+body {
+    background-color: #282c34;
+    color: rgb(247, 243, 243);
+    font-family: Arial;
+    text-align: center;
+  }
+ 
+
+  .btn-add{
+    background-color: rgb(156, 43, 37);
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin: 10px 20px;
+   
+  }
+  .btn-dlt{
+    background-color: rgb(25, 174, 200);
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin: 10px 20px;
+    
+   
+  }
+  .add-input{
+  background-color: rgb(97, 97, 106);
+  color: white;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  }
+  .btn-edit{
+    background-color: rgb(155, 79, 170);
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    margin: 20px;
+   
+  }
+
+  .btn-save{
+    background-color: rgb(113, 39, 110);
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    margin: 20px;
+   
+  }
+  .my-list {
+    padding: 10px;
+  }
+  
+  .list-item {
+    background-color: rgb(75, 46, 88);
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+  }
+  

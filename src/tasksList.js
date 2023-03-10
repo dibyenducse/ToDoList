@@ -3,9 +3,9 @@ import { useState } from "react";
 export default function TasksList({tasks, onChangeTask, onDeleteTask})
 {
     return (
-        <ul>
+        <ul className="my-list">
             {tasks.map((task) => (
-                <li key ={task.id} >
+                <li className="list-item" key ={task.id} >
                      <Task task={task}
                      onChange={onChangeTask} 
                      onDelete={onDeleteTask} />
@@ -24,6 +24,7 @@ function Task({task, onChange, onDelete}) {
       taskRow = (
         <>
           <input
+            className="edit-input"
             value={task.text}
             onChange={(e) => {
               onChange({
@@ -32,14 +33,14 @@ function Task({task, onChange, onDelete}) {
               });
             }}
           />
-          <button onClick={() => setIsEditing(false)}>Save</button>
+          <button className="btn-save" onClick={() => setIsEditing(false)}>Save</button>
         </>
       );
     } else {
       taskRow = (
         <>
           {task.text}
-          <button onClick={() => setIsEditing(true)}>Edit</button>
+          <button className="btn-edit" onClick={() => setIsEditing(true)}>Edit</button>
         </>
       );
     }
@@ -48,7 +49,7 @@ function Task({task, onChange, onDelete}) {
       <>
         {taskRow}
         {onDelete && (
-          <button onClick={() => onDelete(task.id)}>
+          <button className="btn-dlt" onClick={() => onDelete(task.id)}>
             Delete
           </button>
         )}
