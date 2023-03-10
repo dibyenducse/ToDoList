@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import AddTasks from './AddTasks';
+import AddTask from './AddTasks';
 import TasksList from './tasksList';
 import React from 'react';
 
@@ -11,11 +11,10 @@ export default function ToDoList(){
         ...tasks,
         {
       id:taskId++,
-      text:{text},
-      },
+      text:text,
+      }
     ]);
   }
-
 
   function handleChangeTask(task){
       setTasks(
@@ -25,7 +24,7 @@ export default function ToDoList(){
           } else{
             return t;
           }
-        } )
+        })
       )
   }
 
@@ -36,8 +35,11 @@ export default function ToDoList(){
   return(
     <div>
      <h1>ToDoList</h1>
-     <AddTasks onAddTask={handleAddTask} />
-     <TasksList onChangeTask={handleChangeTask} OnDeleteTask = {handleDeleteTask} />
+     <AddTask onAddTask={handleAddTask} />
+     <TasksList 
+     tasks={tasks} 
+     onChangeTask={handleChangeTask} 
+     onDeleteTask={handleDeleteTask} />
     </div>
   )
 
